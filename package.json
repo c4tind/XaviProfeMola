@@ -1,5 +1,5 @@
 {
-  "name": "llibresapi",
+  "name": "productesapi",
   "description": "Primer exemple en Heroku",
   "main": "server.js",
   "scripts": {

@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var app = express();
 
 app.use(bodyParser.json());
-app.use("/api/llibres", require("./controllers/api/llibres"));
+app.use("/api/productes", require("./controllers/api/productes"));
 app.use("/",require("./controllers/static"));
 
 

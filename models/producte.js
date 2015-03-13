@@ -1,23 +1,22 @@
 var db = require("../db");
-var Llibre = db.model('Llibre', {
-            isbn: {
+var Producte = db.model('Producte', {
+            codi: {
                 type: String,
                 required: true,
                 unique: true
             },
-            titol: {
+            nom: {
                 type: String,
                 required: true
             },
-            autors : {
-                type: [String],
+            seccio : {
+                type: String,
                 required: true
             },
-            date: {
-                type: Date,
-                required: true,
-                default: Date.now
+            preu: {
+                type: Number,
+                required: true
             }
     });
 
-module.exports = Llibre;
+module.exports = Producte;

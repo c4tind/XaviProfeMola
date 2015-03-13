@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body ng-app="appProductes">
+
+        <div ng-controller="ProductesController" class="container">
+            <div class="jumbotron">
+                <h2 class="text-center">Botiga Xavi Hurtado - Filtre preu</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6" id="llistatProductes" style="overflow-y: auto;">
+                    <div class="list-group">
+                        <div ng-repeat="producte in productes">
+                            <div class="list-group-item" >
+                                <div class="row-action-primary">
+                                    <i class="mdi-maps-local-library"></i>
+                                </div>
+                                <div class="row-content">
+                                    <div class="action-secondary"><i class="mdi-material-info"></i></div>
+                                    <h4 class="list-group-item-heading">{{producte.nom}}</h4>
+                                    <p class="list-group-item-text">codi: {{producte.codi}}</p>
+                                    <p class="list-group-item-text">seccio: {{producte.seccio}}</p>
+                                    <p class="list-group-item-text">preu: {{producte.preu}}</p>
+                                    <a href="javascript:void(0)" ng-click="esborrarProducte(producte)" class="btn btn-danger">Esborra</a>
+                                    <a href="javascript:void(0)" ng-click="editarProducte(producte)" class="btn btn-primary">Editar</a>
+                                </div>
+                            </div>
+                            <div class="list-group-separator"></div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!-- Your site ends -->
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-resource.min.js"></script>
+        <script src="js/app.js"></script>
+
+    </body>
+
+</html>

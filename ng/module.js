@@ -1,1 +1,1 @@
-angular.module("appLlibres", ["ngResource"]);
+angular.module("appProductes", ["ngResource"]);
